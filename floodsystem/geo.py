@@ -11,8 +11,8 @@ from os import stat
 def stations_by_distance(stations, p):
     """Requirement for Task 1B"""
     dist_stat = []
-    for stat in stations:
-        dist_stat.append((stat, haversine(stat.coord, p),))
+    for s in stations:
+        dist_stat.append((s, haversine(s.coord, p),))
     result = sorted_by_key(dist_stat, 1)
     return result
 
